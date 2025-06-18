@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Customs Filing Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive web application designed for customs brokers to manage their daily customs filing operations. Built with **React** and **Tailwind CSS**.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Customs Filing Portal provides customs brokers with an intuitive interface to manage their clients' customs filings, track submission status, and maintain customer relationships. The application focuses on usability for professionals who may not be highly technical, offering a clean and straightforward user experience.
 
-### `npm start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login & Register forms with toggle support
+Dashboard Summary Cards (Pending, Approved, Completed, Customers)
+Shipment/Project Status List with tracking and color-coded status badges
+Icon support via `lucide-react`
+Responsive design for all screen sizes (mobile, tablet, desktop)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Tech Stack
 
-### `npm test`
+- [React](https://reactjs.org/) – UI library
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+- [Lucide React](https://lucide.dev/) – Icon library
+- (Optional) [Shadcn UI](https://ui.shadcn.com/) – UI components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+git clone https://github.com/shivanejivaji/Customs-Filing-Portal.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
+npm start
+npm install lucide-react
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then configure tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How to Run Project
+-npm start
+You can now view customs-filing-portal in the browser.      
 
-### `npm run eject`
+  Local:            http://localhost:3000        
+  On Your Network:  http://192.168.56.1:3000 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Add Tailwind to index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Customization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can add more dashboard widgets/cards via DashboardCards.jsx.
+Add or edit rows in StatusList.jsx for your own tracking items.
+Modify color schemes easily via Tailwind classes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Screenshots**
+*Login Page*
+![image](https://github.com/user-attachments/assets/63b715a5-c40d-41b8-aad2-56e1d24da04a)
 
-## Learn More
+*Register Page*
+![image](https://github.com/user-attachments/assets/fbf5c806-97cf-443b-a50b-eaea7cbaf764)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Dashboard Page*
+![image](https://github.com/user-attachments/assets/7c443175-ed46-408e-960b-8eba023deef4)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Help Page*
+![image](https://github.com/user-attachments/assets/3bc0f390-0443-4d78-ac5d-a0437d75abff)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Made by Jivaji Shivane
+Feel free to reach out or contribute!
